@@ -78,15 +78,23 @@ export default class MainPage extends Component {
                             <UserInfo avatarURL={this.state.userData.avatar_url} name={this.state.userData.name} />
                         </Grid.Column>
                     </Grid.Row>
-                    {this.renderQuestions()}
+                    <Grid.Row>
+                        <Grid.Column>
+                            {this.renderQuestions()}
+                        </Grid.Column>
 
+                    </Grid.Row>
                 </Grid>
             )
         } else {
             return (
-                <div>
-                    Loading...
-                </div>
+                <Grid textAlign="center">
+                    <Grid.Row>
+                        <Grid.Column>
+                            Loading...
+                        </Grid.Column>
+                    </Grid.Row>
+                </Grid>
             )
         }
     }
